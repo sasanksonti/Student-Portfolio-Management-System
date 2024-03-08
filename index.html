@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portfolios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #008080;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        li {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        strong {
+            color: #008080;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #008080;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Portfolios</h1>
+    <ul>
+        {% for portfolio in portfolios %}
+        <li>
+            <strong>Name:</strong> {{ portfolio[0] }}<br>
+            <strong>Description:</strong> {{ portfolio[1] }}<br>
+	    <strong>Skills:</strong> {{ portfolio[2] }}<br>
+	    <strong>Projects:</strong> {{portfolio[3] }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/create">Add New Portfolio</a>
+    <a href="/delete">Delete Portfolios</a>
+</body>
+</html>

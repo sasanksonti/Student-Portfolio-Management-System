@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Student Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #008080;
+        }
+        form {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #008080;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        button[type="submit"] {
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #cc3700;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #008080;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delete Student Portfolio</h1>
+    <form method="POST" action="/delete">
+        <label for="portfolioName">Portfolio Name:</label>
+        <input type="text" name="portfolioName" id="portfolioName" required><br>
+
+        <button type="submit">Delete</button>
+    </form>
+    <a href="/">Back to Portfolios</a>
+</body>
+</html>
+
